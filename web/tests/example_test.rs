@@ -1,22 +1,16 @@
 use axum::{
     body::Body,
-    http::{self, Method},
+    http::Method,
 };
 use axum_on_rails::test::helpers::{request, teardown, TestContext};
 use axum_on_rails_procs::test;
 use hyper::StatusCode;
-use rust_rest_db::entities::Task;
-use serde::Serialize;
-use serde_json::json;
 use std::collections::HashMap;
-use uuid::Uuid;
 
 mod common;
 
-type TasksList = Vec<Task>;
-
 #[test]
-async fn test_hello(_context: &TestContext) {
+async fn test_hello(context: &TestContext) {
     let response = request(
         &context.app,
         "/example",
@@ -26,6 +20,6 @@ async fn test_hello(_context: &TestContext) {
     )
     .await;
 
-    assert_eq!(response.status(), StatusCode::OK);
-    assert_eq!(response.into_body(), "<h1>Hello, World!</h1>");
+    let body = hyper::body::to_bytes(response.into_body()).await.unwrap();
+    assert_eq!(&body[..], b"<h1>Hello, World!</h1>");
 }

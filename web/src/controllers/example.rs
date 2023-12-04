@@ -1,6 +1,5 @@
 use crate::{internal_error, state::AppState};
-use axum::{extract::Path, extract::State, http::StatusCode, Json};
-use rust_rest_db::entities::Task;
+use axum::{extract::Path, extract::State, http::StatusCode, Json, response::Html};
 use serde::Deserialize;
 #[cfg(test)]
 use serde::Serialize;

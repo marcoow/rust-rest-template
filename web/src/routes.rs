@@ -8,6 +8,6 @@ use axum::{
 
 pub fn routes(app_state: AppState) -> Router {
     Router::new()
-        .route("/example", post(hello))
+        .route("/example", get(hello))
         .with_state(app_state)
 }

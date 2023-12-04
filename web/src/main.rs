@@ -1,5 +1,5 @@
 use axum_on_rails::init_tracing;
-use rust_rest_web::run;
+use {{crate_name}}_web::run;
 
 #[tokio::main]
 async fn main() {
