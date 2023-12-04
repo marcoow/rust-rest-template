@@ -16,9 +16,9 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_DB: rust_rest
-          POSTGRES_USER: rust_rest
-          POSTGRES_PASSWORD: rust_rest
+          POSTGRES_DB: {{crate_name}}
+          POSTGRES_USER: {{crate_name}}
+          POSTGRES_PASSWORD: {{crate_name}}
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -63,9 +63,9 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_DB: rust_rest
-          POSTGRES_USER: rust_rest
-          POSTGRES_PASSWORD: rust_rest
+          POSTGRES_DB: {{crate_name}}
+          POSTGRES_USER: {{crate_name}}
+          POSTGRES_PASSWORD: {{crate_name}}
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -97,9 +97,9 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_DB: rust_rest
-          POSTGRES_USER: rust_rest
-          POSTGRES_PASSWORD: rust_rest
+          POSTGRES_DB: {{crate_name}}
+          POSTGRES_USER: {{crate_name}}
+          POSTGRES_PASSWORD: {{crate_name}}
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -110,9 +110,9 @@ jobs:
       postgres_test:
         image: postgres
         env:
-          POSTGRES_DB: rust_rest_test
-          POSTGRES_USER: rust_rest_test
-          POSTGRES_PASSWORD: rust_rest_test
+          POSTGRES_DB: {{crate_name}}_test
+          POSTGRES_USER: {{crate_name}}_test
+          POSTGRES_PASSWORD: {{crate_name}}_test
         options: >-
           --health-cmd pg_isready
           --health-interval 10s

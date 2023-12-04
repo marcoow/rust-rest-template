@@ -4,17 +4,17 @@ services:
     image: "postgres"
     restart: always
     environment:
-      POSTGRES_PASSWORD: rust_rest
-      POSTGRES_USER: rust_rest
-      POSTGRES_DB: rust_rest
+      POSTGRES_PASSWORD: {{crate_name}}
+      POSTGRES_USER: {{crate_name}}
+      POSTGRES_DB: {{crate_name}}
     ports:
       - 5432:5432
   postgres_test:
     image: "postgres"
     restart: always
     environment:
-      POSTGRES_PASSWORD: rust_rest_test
-      POSTGRES_USER: rust_rest_test
-      POSTGRES_DB: rust_rest_test
+      POSTGRES_PASSWORD: {{crate_name}}_test
+      POSTGRES_USER: {{crate_name}}_test
+      POSTGRES_DB: {{crate_name}}_test
     ports:
       - 5433:5432
