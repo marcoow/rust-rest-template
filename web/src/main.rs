@@ -1,4 +1,4 @@
-use axum_on_rails::init_tracing;
+use pacesetter::init_tracing;
 use {{crate_name}}_web::run;
 
 #[tokio::main]
