@@ -1,6 +1,6 @@
 use axum::http::StatusCode;
 use axum_on_rails::{get_env, load_config};
-use {{crate-name}}_config::Config;
+use {{crate_name}}_config::Config;
 use tracing::info;
 
 mod controllers;

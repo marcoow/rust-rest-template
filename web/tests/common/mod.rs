@@ -3,9 +3,9 @@ use axum_on_rails::{
     test::helpers::{build_test_context, prepare_db, TestContext},
     Environment,
 };
-use {{crate-name}}_config::Config;
-use {{crate-name}}_web::routes::routes;
-use {{crate-name}}_web::state::AppState;
+use {{crate_name}}_config::Config;
+use {{crate_name}}_web::routes::routes;
+use {{crate_name}}_web::state::AppState;
 use sqlx::postgres::PgPoolOptions;
 use std::cell::OnceCell;
 

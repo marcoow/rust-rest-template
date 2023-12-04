@@ -11,8 +11,8 @@ axum-on-rails = { path = "../axum-on-rails" }
 clap = "4.4"
 rand = "0.8"
 refinery = { version = "0.8", features = ["tokio-postgres"]}
-{{crate-name}}_config = { path = "../config" }
-{{crate-name}}_db = { path = "../db" }
+{{crate_name}}_config = { path = "../config" }
+{{crate_name}}_db = { path = "../db" }
 serde = { version = "1.0", features = ["derive"] } 
 sqlx = { version = "0.7", features = [ "runtime-tokio", "tls-rustls", "postgres", "macros", "uuid", "migrate", "chrono" ] }
 tokio = { version = "1.33", features = ["full"] }

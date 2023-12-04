@@ -1,4 +1,4 @@
-use {{crate-name}}_config::Config;
+use {{crate_name}}_config::Config;
 use sqlx::postgres::{PgPool, PgPoolOptions};
 
 #[derive(Clone)]

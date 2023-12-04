@@ -14,5 +14,5 @@ path = "src/bin/generate.rs"
 
 [dependencies]
 axum-on-rails = { path = "../axum-on-rails" }
-{{crate-name}}_config = { path = "../config" }
+{{crate_name}}_config = { path = "../config" }
 tokio = { version = "1.33", features = ["full"] }
