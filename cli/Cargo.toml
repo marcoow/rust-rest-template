@@ -1,0 +1,18 @@
+[package]
+name = "{{project-name}}-cli"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "db"
+path = "src/bin/db.rs"
+
+[[bin]]
+name = "generate"
+path = "src/bin/generate.rs"
+
+[dependencies]
+axum-on-rails = { path = "../axum-on-rails" }
+{{crate-name}}_config = { path = "../config" }
+tokio = { version = "1.33", features = ["full"] }
