@@ -1,8 +1,7 @@
 use crate::controllers::example::hello;
 use crate::state::AppState;
 use axum::{
-    middleware,
-    routing::{get, post},
+    routing::get,
     Router,
 };
 

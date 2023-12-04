@@ -4,7 +4,6 @@ use axum::{
 };
 use axum_on_rails::test::helpers::{request, teardown, TestContext};
 use axum_on_rails_procs::test;
-use hyper::StatusCode;
 use std::collections::HashMap;
 
 mod common;
